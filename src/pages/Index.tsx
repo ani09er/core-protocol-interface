@@ -87,12 +87,13 @@ const Index = () => {
               alt="AI Simulation Chamber"
               className="h-full w-full object-cover"
               initial={{ scale: 1.1, opacity: 0 }}
-              animate={{ scale: 1, opacity: 0.4 }}
+              animate={{ scale: 1, opacity: 0.6 }}
               transition={{ duration: 1.5, ease: "easeOut" }}
+              style={{ filter: "brightness(1.2) saturate(1.3)" }}
             />
-            {/* Gradient overlays */}
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/50" />
-            <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-transparent to-background" />
+            {/* Gradient overlays - lighter for more visibility */}
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-background/30" />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background" />
           </div>
 
           {/* Protocol Color Effect */}
