@@ -5,6 +5,7 @@ import { Menu, X, Hexagon } from "lucide-react";
 
 const navItems = [
   { label: "HOME", path: "/" },
+  { label: "PRE-LAUNCH", path: "/pre-launch" },
   { label: "CORE PROTOCOL", path: "/game" },
   { label: "SYSTEMS", path: "/systems" },
   { label: "STUDIO", path: "/studio" },
