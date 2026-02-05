@@ -12,6 +12,7 @@ import Devlog from "./pages/Devlog";
 import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
+import ComingSoon from "./pages/ComingSoon";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
         <Layout>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/coming-soon" element={<ComingSoon />} />
             <Route path="/game" element={<Game />} />
             <Route path="/systems" element={<Systems />} />
             <Route path="/studio" element={<Studio />} />
