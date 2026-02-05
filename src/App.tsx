@@ -13,6 +13,7 @@ import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import ComingSoon from "./pages/ComingSoon";
+import PreLaunch from "./pages/PreLaunch";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/coming-soon" element={<ComingSoon />} />
+            <Route path="/pre-launch" element={<PreLaunch />} />
             <Route path="/game" element={<Game />} />
             <Route path="/systems" element={<Systems />} />
             <Route path="/studio" element={<Studio />} />
