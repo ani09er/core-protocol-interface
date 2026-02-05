@@ -5,6 +5,7 @@ import { Zap, Shield, Wind, ChevronDown, Play, Hexagon } from "lucide-react";
 import { BootSequence } from "@/components/BootSequence";
 import { ProtocolNode } from "@/components/ProtocolNode";
 import { SectionHeader } from "@/components/SectionHeader";
+import heroImage from "@/assets/hero-simulation-chamber.jpg";
 
 const protocols = [
   {
@@ -79,21 +80,33 @@ const Index = () => {
       <div className="relative">
         {/* Hero Section */}
         <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
-          {/* Background Effects */}
+          {/* Hero Background Image */}
           <div className="absolute inset-0">
-            <motion.div
-              className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full"
-              style={{
-                background: activeProtocol
-                  ? `radial-gradient(circle, ${
-                      protocols.find((p) => p.name === activeProtocol)?.color
-                    }20 0%, transparent 70%)`
-                  : "radial-gradient(circle, hsl(190, 100%, 50%, 0.1) 0%, transparent 70%)",
-              }}
-              animate={{ scale: [1, 1.1, 1] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            <motion.img
+              src={heroImage}
+              alt="AI Simulation Chamber"
+              className="h-full w-full object-cover"
+              initial={{ scale: 1.1, opacity: 0 }}
+              animate={{ scale: 1, opacity: 0.4 }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
             />
+            {/* Gradient overlays */}
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/50" />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-transparent to-background" />
           </div>
+
+          {/* Protocol Color Effect */}
+          <motion.div
+            className="absolute inset-0 transition-opacity duration-500"
+            style={{
+              background: activeProtocol
+                ? `radial-gradient(ellipse at center, ${
+                    protocols.find((p) => p.name === activeProtocol)?.color
+                  }15 0%, transparent 60%)`
+                : "transparent",
+              opacity: activeProtocol ? 1 : 0,
+            }}
+          />
 
           {/* Floating Core */}
           <motion.div
