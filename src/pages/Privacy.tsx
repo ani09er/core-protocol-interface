@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/SectionHeader";
 
 const Privacy = () => {
@@ -6,11 +5,7 @@ const Privacy = () => {
     <div className="relative min-h-screen pt-24">
       <section className="relative py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center"
-          >
+          <div className="text-center">
             <span className="mb-4 inline-block font-mono text-xs tracking-[0.3em] text-primary">
               // LEGAL DOCUMENT
             </span>
@@ -20,14 +15,9 @@ const Privacy = () => {
             <p className="font-mono text-xs text-muted-foreground">
               Last updated: February 5, 2025
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="mt-12 space-y-8"
-          >
+          <div className="mt-12 space-y-8">
             <div className="protocol-card rounded-xl border border-border/30 p-8">
               <h2 className="mb-4 font-display text-xl font-bold tracking-wider text-foreground">
                 1. INFORMATION WE COLLECT
@@ -123,7 +113,7 @@ const Privacy = () => {
                 </a>
               </p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>
